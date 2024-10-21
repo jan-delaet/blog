@@ -1,0 +1,126 @@
+baseURL: https://delaet.dev/
+languageCode: en-us
+title: Yet Another Cloud/DevOps Blog
+theme: ["PaperMod"]
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+# pygmentsUseClasses: true
+mainsections: ["posts", "papermod"]
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  social: true
+  description: A useless DevOps blog
+  keywords: ["DevOps", "Cloud", "Azure", "Kubernetes", "GitOps", "GitHub"]
+  author: Jan De Laet
+  defaultTheme: auto
+  # showShareButtons: true
+  showReadingTime: true
+  # disableSpecial1stPost: true
+  displayFullLangName: true
+  showPostNavLinks: true
+  showBreadCrumbs: true
+  showCodeCopyButtons: true
+  showRssButtonInSectionTermList: true
+  showAllPagesInArchive: true
+  showPageNums: true
+  showtoc: true
+  tocopen: true
+  comments: true
+  images: ["images/papermod-cover.png"]
+
+  profileMode:
+    enabled: false
+    title: Jan De Laet
+    imageUrl: "#"
+    imageTitle: my image
+    buttons:
+      - name: Archives
+        url: archives
+      - name: Tags
+        url: tags
+
+  homeInfoParams:
+    title: "Hey there!"
+    Content: |-
+      My name is Jan, I'm a Solutions Architect residing in Belgium. I'm currently working as a consultant and helping several companies on their cloud journey, particularly using the Microsoft Azure platform.
+
+      I have a strong focus on DevOps practices and application lifecycle management, and I'm a big fan of figuring out how to automate all the boring parts that come with it.
+
+      Below you can find a list of my ramblings, which are mostly about DevOps, Cloud, and other related technologies.
+
+  socialIcons:
+    - name: GitHub
+      title: GitHub Profile
+      url: https://github.com/jan-delaet
+    - name: LinkedIn
+      title: LinkedIn Profile
+      url: https://www.linkedin.com/in/jan-de-laet-28b2b997/
+    - name: Mastodon
+      title: Mastodon Profile
+      url: https://mastodon.social/@jandelaet
+    - name: Kubestronaut
+      title: CNCF Profile
+      url: https://www.cncf.io/training/kubestronaut/?p=jan-de-laet
+
+  editPost:
+    URL: https://github.com/jan-delaet/blog/tree/content
+
+  # assets:
+  #   disableHLJS: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10
+    keys: ["title", "permalink", "summary", "content"]
+
+markup:
+  highlight:
+    style: monokai
+    noClasses: true
+    codeFences: true
+    anchorLineNos: false
+    guessSyntax: false
+    lineNos: false
+    lineNumbersInTable: true
+    noHl: false
+    tabWidth: 4
